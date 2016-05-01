@@ -1,0 +1,9 @@
+body {
+background: #FFFFFF;
+text-align:center
+}
+#main {
+width: 1000px;
+height:600px;
+margin: 25px auto;
+}
