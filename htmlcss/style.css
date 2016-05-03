@@ -1,53 +1,82 @@
 body {
-background: #EEEEEE;
-text-align:center
+  background: #EEEEEE;
+  text-align: center
 }
+
 #main {
-width: 1000px;
-height:800px;
-background: #FFFFFF;
-margin: 25px auto;
-border: solid 2px #000000;
+  width: 1000px;
+  height: 800px;
+  background: #FFFFFF;
+  margin: 25px auto;
+  border: solid 2px #000000;
 }
 
 h1 {
-text-align: center;
-font-family:"Times New Roman";
-font: 20pt;
-color: #000000;
+  text-align: center;
+  font-family: "Times New Roman";
+  font: 20pt;
+  color: #000000;
 }
 
 hr {
-height: 2px;
-color: #000000;
+  height:2px;
+  color: #000000;
 }
 
 p {
-font-family:"Calibri";
-font-size: 14pt;
-text-align: center;
-color: #2f2d2d;
+  font-family: "Calibri";
+  font-size: 14pt;
+  text-align: center;
+  color: #2f2d2d;
 }
 
-.button {
-	border-radius: 32px;
-    background-color: #4CAF50; /* Green */
-    border: solid 2px #000000;
-    color: #fff;
-    padding: 32px 64px;
-    text-align: left;
-    text-decoration: none;
+#timer{
+  font-size: 30pt;
+  border-radius: 4px;
+  border: solid 2px #000000;
+  padding: 4px 4px;
+  outline: none;
+}
+
+#counter{
+    font-size:32px;
+    font-family:Calibri;
+    background:red;
+    padding: 32px 100px;
+    line-height:100px;
+    text-align:center;
+    border-radius:32px;
+    box-shadow:0 0 20px black inset;
+    border:solid 2px #000000;
     display: inline-block;
-    font-size: 32px;
-	cursor: pointer;
-	outline: none;
-	
+    transition:0.2s;
 }
 
-.button:hover {background-color: #3e8e41}
+#counter1{
+    font-size:32px;
+    font-family:Calibri;
+    background:green;
+    padding: 32px 100px;
+    line-height:100px;
+    text-align:center;
+    border-radius:32px;
+    box-shadow:0 0 20px black inset;
+    border:solid 2px #000000;
+    display: inline-block;
+    transition:0.2s;
+}
 
-.button:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+#counter:active{
+    
+    background:darkred;
+    box-shadow:0 0 40px black inset;
+    
+}
+
+
+#counter1:active{
+    
+    background:darkgreen;
+    box-shadow:0 0 40px black inset;
+    
 }
