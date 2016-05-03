@@ -1,3 +1,13 @@
+var mysql = require('mysql');
+var connection = mysql.createConnection({
+	host : 'localhost',
+	user : 'root',
+	password : 'nick172',
+	database : 'cmpe_172_game'
+});
+
+connection.connect();
+
 function Timer() {
 	var display = document.getElementById("timer"),
 		now = new Date(),
@@ -10,16 +20,38 @@ function Timer() {
 	
 }
 
+function b1Click() {
+	button2.disables = true;
+	button2.style.backgroundColor = "#A08080";
+	connection.query('SELECT points FROM score WHERE color = 'green'', function (err, rows, fields) {
+		if(err) throw err;
+		var curpt = rows[0].points + 1;
+		connection.query('UPDATE score SET points = ' + curpt + ' WHERE name = 'green'', function(err, rows, fields) {
+			if(err) throw err;
+		});  
+	}	
+}
+
+function b2Click() {
+        button1.disables = true;
+        button1.style.backgroundColor = "#A08080";
+	connection.query('SELECT points FROM score WHERE color = 'green'', function (err, rows, fields) {
+                if(err) throw err;
+                var curpt = rows[0].points + 1;
+                connection.query('UPDATE score SET points = ' + curpt + ' WHERE name = 'green'', function(err, rows, fields) {
+                        if(err) throw err;
+                });
+        }
+
+}
+
+
 window.onload = function () {
     Timer();
 	var button1 = document.getElementById("counter1"),
 		button2 = document.getElementById("counter2");
-	button1.addEventListener("click", function(){
-		button2.disabled = true;
-		button2.style.backgroundColor = "#A08080";
-	}, false);	
-	button2.addEventListener("click", function(){
-		button1.disabled = true;
-		button1.style.backgroundColor = "#A08080";
-	}, false);
+	button1.addEventListener("click", b1Click, false);
+	button2.addEventListener("click", b2Click, false); 
 };
+
+connection.end();
