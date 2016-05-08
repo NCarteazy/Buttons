@@ -31,12 +31,17 @@ p {
   color: #2f2d2d;
 }
 
-#timer{
-  font-size: 30pt;
-  border-radius: 4px;
+#timer{ 
+  float: center;
+  width: 75px;
+  height: 30px;
+  margin: 30px;
+  font-size: 15px;
   border: solid 2px #000000;
-  padding: 4px 4px;
   outline: none;
+  margin: auto;
+  margin-top: 60px;
+  
 }
 
 #center{
@@ -68,6 +73,7 @@ p {
     border:solid 2px #000000;
     display: inline-block;
     transition:0.2s;
+    margin-top: 20px;
 }
 
 #counter2{
@@ -81,6 +87,7 @@ p {
     border:solid 2px #000000;
     display: inline-block;
     transition:0.2s;
+    margin-top: 20px;
 }
 
 #counter1:active{
