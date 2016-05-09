@@ -1,0 +1,30 @@
+{
+  "name": "buttons",
+  "version": "1.0.0",
+  "description": "small buttons webapp game",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NCarteazy/buttons"
+  },
+  "keywords": [
+    "heroku",
+    "express",
+    "node.js"
+  ],
+  "author": "Nick C",
+  "license": "SJSU",
+  "bugs": {
+    "url": "https://github.com/NCarteazy/buttons/issues"
+  },
+  "homepage": "https://github.com/NCarteazy/buttons",
+  "dependencies": {
+    "express": "^4.13.4"
+  },
+  "engines":{
+   "node": "5.8.0"
+  }
+}
