@@ -33,15 +33,21 @@ p {
 
 #timer{ 
   float: center;
-  width: 75px;
-  height: 30px;
-  margin: 30px;
-  font-size: 15px;
+  width: 15%;
+  min-width: 100px;
+  height: 60px;
+  margin: 0 auto;
+  font-size: 40px;
+  text-align: center;
   border: solid 2px #000000;
   outline: none;
-  margin: auto;
-  margin-top: 60px;
   
+}
+
+#winner{
+	float: center;
+	font-family: "Arial Black";
+	font-size: 80px;
 }
 
 #center{
