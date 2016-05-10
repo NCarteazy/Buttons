@@ -47,7 +47,7 @@ function Timer() {
 		curSec = now.getSeconds(),
 		endSec = (curSec < 30) ? 30 - curSec : 60 - curSec,
 		finSec = (endSec < 10) ? "0" + endSec : endSec;
-	console.log(<%=DateTime.Now%>);
+	console.log('<%=DateTime.Now%>');
         display.innerHTML = "00:" + finSec;
 	if(1 === endSec) {
 		setTimeout(ender, 1000);
