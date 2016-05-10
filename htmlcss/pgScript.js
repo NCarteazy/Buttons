@@ -49,7 +49,8 @@ function Timer() {
 		endSec = (curSec < 30) ? 30 - curSec : 60 - curSec,
 		finSec = (endSec < 10) ? "0" + endSec : endSec;
         display.innerHTML = "00:" + finSec;
-	if(1 === endSec) {
+	console.log(sTime);
+     	if(1 === endSec) {
 		setTimeout(ender, 1000);
 	}
 	setTimeout(Timer, 1000);
