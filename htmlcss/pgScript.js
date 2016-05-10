@@ -90,7 +90,7 @@ function ender() {
 
     if(greenc > redc) {
       var winner = button1,
-          winname = "green",
+          winname = "green";
     }
     else {
       var winner = button2,
