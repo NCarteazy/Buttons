@@ -1,18 +1,6 @@
 $(document).ready(function(){
   $('#counter1').on('click', function(e){
     e.preventDefault();
-    $.ajax({
-      url: "https://api.mlab.com/api/1/databases/cmpe172game/collections/score?apiKey=AJMjXxj5wXnTDjLmAguBhhjlksAb7qnv",
-      type: "GET",
-      contentType: "application/json",
-      success: function(data){
-        console.log(data) 
-      },
-      error: function(xhr, status, err){
-        console.log(err);
-      }
-    });
-
   });
 
 });
