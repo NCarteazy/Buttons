@@ -7,6 +7,7 @@ $(document).ready(function(){
 
 
 function getDat(){
+  console.log("hola");
   $.ajax({
     url: "https://api.mlab.com/api/1/databases/cmpe172game/collections/score?apiKey=AJMjXxj5wXnTDjLmAguBhhjlksAb7qnv" 
   }).done(function(data){
