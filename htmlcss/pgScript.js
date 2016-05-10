@@ -80,7 +80,16 @@ function ender() {
 	wintext.innerHTML = "WINNER";
 	});
 	setTimeout(resetPage, 750);
-	
+	setTimeout(resetScore, 3000);
+}
+
+function resetScore() {
+  $.ajax({
+    url:  "https://api.mlab.com/api/1/databases/cmpe172game/collections/score?apiKey=zSElocti0xgz1UhZKYD9ezXcaMO7BFqq",
+    data: JSON.stringify( { "$set" : { "red" : 0 , "green" : 0 } } ),
+    type: "PUT",
+    contentType: "application/json"
+  });
 }
 
 function resetPage() {
