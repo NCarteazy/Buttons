@@ -1,4 +1,4 @@
-$document.ready(function(){
+$(document).ready(function(){
   $('#counter1').on('click', function(e){
     e.preventDefault();
     console.log('Submitted');
