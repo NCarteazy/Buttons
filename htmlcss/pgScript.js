@@ -60,15 +60,15 @@ function ender() {
 	var button1 = document.getElementById("counter1"),
 		button2 = document.getElementById("counter2"),
 		wintext = document.getElementById("wintext"),
-		fval = Math.random();
-	if(button2.disables === true) {
-		fval = fval + 0.25;
-	}
-	if(button1.disables === true) {
-		fval = fval - 0.25;
-	}
 	
-	if(Math.random() < 0.5) {
+	$.ajax({
+	   url:  "https://api.mlab.com/api/1/databases/cmpe172game/collections/score?apiKey=zSElocti0xgz1UhZKYD9ezXcaMO7BFqq"
+	   }).done(function(data){
+		 var redc = data[0].red;
+ 		 var greenc = data[0].green;
+	
+	
+	if(greenc > redc) {
 		winner = button1;
 	}
 	else {
@@ -78,7 +78,9 @@ function ender() {
 	winner.style.backgroundColor = "yellow";
 	wintext.style.display = "visible";
 	wintext.innerHTML = "WINNER";
+	});
 	setTimeout(resetPage, 750);
+	
 }
 
 function resetPage() {
