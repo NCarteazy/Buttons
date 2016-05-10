@@ -3,6 +3,7 @@ var app = express()
 
 var MongoClient = require('mongodb').MongoClient;
 var assert = require('assert');
+var ObjectId = require('mongodb').ObjectID;
 
 var url = 'mongodb://carteazy:xb0xlive@ds051923.mlab.com:51923/cmpe172game';
 MongoClient.connect(url, function(err, db) {
