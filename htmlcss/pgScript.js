@@ -98,7 +98,6 @@ function ender() {
       var wintext = "Neither!";
     }
 	
-    winner.style.backgroundColor = "#FFDF00";
     wintext.innerHTML = "The winner is: " + winname;
   });
   setTimeout(resetPage, 5000);
