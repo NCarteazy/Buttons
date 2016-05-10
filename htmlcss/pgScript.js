@@ -138,7 +138,6 @@ function srvTime() {
 	xmlHttp.send('');
 	return xmlHttp.getResponseHeader("Date");
 } 
-}
 
 window.onload = function () {
     	var st = srvTime();
