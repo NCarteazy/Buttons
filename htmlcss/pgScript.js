@@ -6,7 +6,7 @@ $(document).ready(function(){
     }).done(function(data){
         var gpp = data[0].green + 1;
         $.ajax({
-          url:  "https://api.mlab.com/api/1/databases/cmpe172game/collections/score?apiKey=zSElocti0xgz1UhZKYD9ezXcaMO7BFqq&q={_id:5731545ddcba0f03afc2cc0d}",
+          url:  "https://api.mlab.com/api/1/databases/cmpe172game/collections/score?apiKey=zSElocti0xgz1UhZKYD9ezXcaMO7BFqq",
           data: JSON.stringify( { "$set" : { "green" : gpp } } ),
           type: "PUT",
           contentType: "application/json" 
