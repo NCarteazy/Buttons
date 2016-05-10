@@ -97,7 +97,7 @@ function ender() {
           winname = "red";  
     }
 	
-    winner.style.backgroundColor = "yellow";
+    winner.style.backgroundColor = "#D4AF37";
     wintext.innerHTML = "The winner is: " + winname;
   });
 }
