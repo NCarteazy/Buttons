@@ -52,7 +52,7 @@ function Timer(st) {
      	if(1 === endSec) {
 		setTimeout(ender, 1000);
 	}
-	setTimeout(Timer(now + 1000), 1000);
+	setTimeout(Timer.bind(null, now + 1000), 1000);
 }
 
 function ender() {
