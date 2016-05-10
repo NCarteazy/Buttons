@@ -1,5 +1,16 @@
 $(document).ready(function(){
+  var st = srvTime();
+  Timer(st);
+  resetPage();
+
+
   $('#counter1').on('click', function(e){
+    var button1 = document.getElementById("counter1"),
+        button2 = document.getElementById("counter2");
+    if(button1.disables === false) {
+      button2.disables = true;
+      button2.style.backgroundColor = "#A08080";
+    }
     e.preventDefault();
     $.ajax({
       url:  "https://api.mlab.com/api/1/databases/cmpe172game/collections/score?apiKey=zSElocti0xgz1UhZKYD9ezXcaMO7BFqq"
@@ -13,9 +24,8 @@ $(document).ready(function(){
         });
       });
   });
-});
 
-$(document).ready(function(){
+
   $('#counter2').on('click', function(e){ 
      e.preventDefault();
      $.ajax({
@@ -104,7 +114,7 @@ function resetPage() {
 	button2.style.backgroundColor = "red";
 	button1.disables = false;
 	button2.disables = false;
-	button1.addEventListener("click", b1Click, false);
+	//button1.addEventListener("click", b1Click, false);
 	button2.addEventListener("click", b2Click, false); 
 	wintext.style.display = "hidden";
 	
@@ -155,8 +165,3 @@ function srvTime() {
 	return xmlHttp.getResponseHeader("Date");
 } 
 
-window.onload = function () {
-    	var st = srvTime();
-	Timer(st);
-	resetPage(); 
-};
