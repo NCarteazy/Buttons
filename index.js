@@ -1,7 +1,7 @@
 var express = require('express')
 var app = express()
 
-app.use(express.static(__dirname + '/public'))
+app.use(express.static(__dirname + '/htmlcss'))
 
 app.get('/', function(requres, response) {
 response.sendfile(__dirname + '/index.html')
