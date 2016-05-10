@@ -10,5 +10,6 @@ response.sendfile(__dirname + 'index.html')
 var port = process.env.PORT || 8080
 
 app.listen(port, function() {
+	console.log("DIR: " + __dirname)
 	console.log("Node app is running at:" + port)
 })
