@@ -49,10 +49,10 @@ function Timer(st) {
 		endSec = (curSec < 30) ? 30 - curSec : 60 - curSec,
 		finSec = (endSec < 10) ? "0" + endSec : endSec;
         display.innerHTML = "00:" + finSec;
-     	if(28 ==== endSec) {
+     	if(28 === endSec) {
 		resetScore();
 	}
-	if(29 === endSec()) {
+	if(29 === endSec) {
 		resetPage();
 	}
 	if(1 === endSec) {
