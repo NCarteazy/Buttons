@@ -10,19 +10,20 @@ $(document).ready(function(){
     if(button1.disables === false) {
       button2.disables = true;
       button2.style.backgroundColor = "#A08080";
-    }
-    e.preventDefault();
-    $.ajax({
-      url:  "https://api.mlab.com/api/1/databases/cmpe172game/collections/score?apiKey=zSElocti0xgz1UhZKYD9ezXcaMO7BFqq"
-    }).done(function(data){
-        var gpp = data[0].green + 1;
-        $.ajax({
-          url:  "https://api.mlab.com/api/1/databases/cmpe172game/collections/score?apiKey=zSElocti0xgz1UhZKYD9ezXcaMO7BFqq",
-          data: JSON.stringify( { "$set" : { "green" : gpp } } ),
-          type: "PUT",
-          contentType: "application/json" 
+    
+      e.preventDefault();
+      $.ajax({
+        url:  "https://api.mlab.com/api/1/databases/cmpe172game/collections/score?apiKey=zSElocti0xgz1UhZKYD9ezXcaMO7BFqq"
+      }).done(function(data){
+          var gpp = data[0].green + 1;
+          $.ajax({
+            url:  "https://api.mlab.com/api/1/databases/cmpe172game/collections/score?apiKey=zSElocti0xgz1UhZKYD9ezXcaMO7BFqq",
+            data: JSON.stringify( { "$set" : { "green" : gpp } } ),
+            type: "PUT",
+            contentType: "application/json" 
+          });
         });
-      });
+    }
   });
 
 
@@ -32,19 +33,20 @@ $(document).ready(function(){
     if(button2.disables === false) {
       button1.disables = true;
       button1.style.backgroundColor = "#A08080";
-    }
-    e.preventDefault();
-    $.ajax({
-      url:  "https://api.mlab.com/api/1/databases/cmpe172game/collections/score?apiKey=zSElocti0xgz1UhZKYD9ezXcaMO7BFqq" 
-    }).done(function(data){
-        var gpp = data[0].red + 1;
-        $.ajax({
-          url:  "https://api.mlab.com/api/1/databases/cmpe172game/collections/score?apiKey=zSElocti0xgz1UhZKYD9ezXcaMO7BFqq",
-          data: JSON.stringify( { "$set" : { "red" : gpp } } ),
-          type: "PUT",             
-          contentType: "application/json"
+    
+      e.preventDefault();
+      $.ajax({
+        url:  "https://api.mlab.com/api/1/databases/cmpe172game/collections/score?apiKey=zSElocti0xgz1UhZKYD9ezXcaMO7BFqq" 
+      }).done(function(data){
+          var gpp = data[0].red + 1;
+          $.ajax({
+            url:  "https://api.mlab.com/api/1/databases/cmpe172game/collections/score?apiKey=zSElocti0xgz1UhZKYD9ezXcaMO7BFqq",
+            data: JSON.stringify( { "$set" : { "red" : gpp } } ),
+            type: "PUT",             
+            contentType: "application/json"
+          });
         });
-      });
+    }
   });
 });
 
