@@ -87,12 +87,15 @@ function ender() {
         greenc = data[0].green;
 
     if(greenc > redc) {
-      var winner = button1,
-          winname = "green";
+      button1.style.backgroundColor = "#FFDF00";
+      var winname = "Green";
+    }
+    else if (greenc < redc){
+      button2.style.backgroundColor = "#FFDF00";
+      var winname = "Red";  
     }
     else {
-      var winner = button2,
-          winname = "red";  
+      var wintext = "Neither!";
     }
 	
     winner.style.backgroundColor = "#FFDF00";
