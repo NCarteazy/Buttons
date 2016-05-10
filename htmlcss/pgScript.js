@@ -44,7 +44,7 @@ function getDat(){
 function Timer(st) {
 	var display = document.getElementById("timer"),
                 now = new Date(st),
-		st = now.getTime(),
+		st = now.getTime() + 1000,
 		curSec = now.getSeconds(),
 		endSec = (curSec < 30) ? 30 - curSec : 60 - curSec,
 		finSec = (endSec < 10) ? "0" + endSec : endSec;
@@ -52,7 +52,7 @@ function Timer(st) {
      	if(1 === endSec) {
 		setTimeout(ender, 1000);
 	}
-	setTimeout(Timer.bind(null, now + 1000), 1000);
+	setTimeout(Timer, 1000, st);
 }
 
 function ender() {
