@@ -43,7 +43,7 @@ function getDat(){
 
 function Timer() {
 	var display = document.getElementById("timer"),
-		now = '<%=DateTime.Now%>',
+		now = Date('<%=DateTime.Now%>'),
 		curSec = now.getSeconds(),
 		endSec = (curSec < 30) ? 30 - curSec : 60 - curSec,
 		finSec = (endSec < 10) ? "0" + endSec : endSec;
