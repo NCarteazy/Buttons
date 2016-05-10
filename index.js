@@ -15,6 +15,12 @@ MongoClient.connect(url, function(err, db) {
 
 app.use(express.static(__dirname + '/htmlcss'))
 
+app.get('/*', function(request, response, next) {
+  response.header('Access-Control-Allow-Origin' , 'http://domain' );
+  response.header('Access-Control-Allow-Credentials', true);
+  next();
+});
+
 app.get('/', function(requres, response) {
 response.sendfile(__dirname + '/index.html')
 })
