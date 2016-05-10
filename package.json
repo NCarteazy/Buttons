@@ -23,7 +23,8 @@
   },
   "homepage": "https://github.com/NCarteazy/buttons",
   "dependencies": {
-    "express": "^4.13.4"
+    "express": "^4.13.4",
+    "mongodb": "^2.1.18"
   },
   "engines": {
     "node": "4.4.4"
