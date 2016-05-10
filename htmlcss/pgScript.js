@@ -13,23 +13,37 @@ $(document).ready(function(){
         });
       });
   });
+});
 
+$(document).ready(function(){
+  $('#counter2').on('click', function(e){ 
+     e.preventDefault();
+     $.ajax({
+      url:  "https://api.mlab.com/api/1/databases/cmpe172game/collections/score?apiKey=zSElocti0xgz1UhZKYD9ezXcaMO7BFqq" 
+    }).done(function(data){
+        var gpp = data[0].red + 1;
+        $.ajax({
+          url:  "https://api.mlab.com/api/1/databases/cmpe172game/collections/score?apiKey=zSElocti0xgz1UhZKYD9ezXcaMO7BFqq",
+          data: JSON.stringify( { "$set" : { "red" : gpp } } ),
+          type: "PUT",             
+          contentType: "application/json"
+        });
+      });
+  });
 });
 
 
 function getDat(){
-  console.log("hola");
   $.ajax({
     url: "https://api.mlab.com/api/1/databases/cmpe172game/collections/score?apiKey=zSElocti0xgz1UhZKYD9ezXcaMO7BFqq" 
   }).done(function(data){
-    
      console.log(data);
   });
 }
 
 function Timer() {
 	var display = document.getElementById("timer"),
-		now = new Date(),
+		now = '<%=DateTime.Now%>',
 		curSec = now.getSeconds(),
 		endSec = (curSec < 30) ? 30 - curSec : 60 - curSec,
 		finSec = (endSec < 10) ? "0" + endSec : endSec;
