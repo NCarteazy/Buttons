@@ -41,9 +41,10 @@ function getDat(){
   });
 }
 
-function Timer() {
+function Timer(st) {
 	var display = document.getElementById("timer"),
-                now = new Date(),
+                now = new Date(st),
+		st = now.getTime(),
 		curSec = now.getSeconds(),
 		endSec = (curSec < 30) ? 30 - curSec : 60 - curSec,
 		finSec = (endSec < 10) ? "0" + endSec : endSec;
@@ -51,7 +52,7 @@ function Timer() {
      	if(1 === endSec) {
 		setTimeout(ender, 1000);
 	}
-	setTimeout(Timer, 1000);
+	setTimeout(Timer(now + 1000), 1000);
 }
 
 function ender() {
@@ -141,7 +142,6 @@ function srvTime() {
 
 window.onload = function () {
     	var st = srvTime();
-	console.log(st)
-	Timer();
+	Timer(st);
 	resetPage(); 
 };
