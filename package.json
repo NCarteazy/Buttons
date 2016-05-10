@@ -4,6 +4,7 @@
   "description": "small buttons webapp game",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "node index.js"
   },
   "repository": {
@@ -24,7 +25,7 @@
   "dependencies": {
     "express": "^4.13.4"
   },
-  "engines":{
-   "node": "4.4.4"
+  "engines": {
+    "node": "4.4.4"
   }
 }
