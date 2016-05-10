@@ -95,7 +95,7 @@ function ender() {
       var winname = "Red";  
     }
     else {
-      var wintext = "Neither!";
+      var winname = "Neither!";
     }
 	
     wintext.innerHTML = "The winner is: " + winname;
