@@ -59,7 +59,7 @@ function ender() {
 	
 	var button1 = document.getElementById("counter1"),
 		button2 = document.getElementById("counter2"),
-		wintext = document.getElementById("wintext"),
+		wintext = document.getElementById("wintext");
 	
 	$.ajax({
 	   url:  "https://api.mlab.com/api/1/databases/cmpe172game/collections/score?apiKey=zSElocti0xgz1UhZKYD9ezXcaMO7BFqq"
