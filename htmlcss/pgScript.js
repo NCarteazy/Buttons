@@ -68,7 +68,7 @@ function Timer(st) {
      	if(28 === endSec) {
 		resetScore();
 	}
-	if(29 === endSec) {
+	if(27 === endSec) {
 		resetPage();
 	}
 	if(1 === endSec) {

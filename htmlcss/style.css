@@ -44,6 +44,10 @@ p {
   
 }
 
+#wintext{
+	font-weight: bold;
+}
+
 #winner{
 	float: center;
 	font-family: "Arial Black";
