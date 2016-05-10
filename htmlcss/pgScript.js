@@ -9,6 +9,7 @@ $(document).ready(function(){
         button2 = document.getElementById("counter2");
     if(button1.disables === false) {
       button2.disables = true;
+      button1.disables = true;
       button2.style.backgroundColor = "#A08080";
     
       e.preventDefault();
@@ -32,6 +33,7 @@ $(document).ready(function(){
         button2 = document.getElementById("counter2");
     if(button2.disables === false) {
       button1.disables = true;
+      button2.disables = true;
       button1.style.backgroundColor = "#A08080";
     
       e.preventDefault();
