@@ -2,9 +2,9 @@ $(document).ready(function(){
   $('#counter1').on('click', function(e){
     e.preventDefault();
     $.ajax({
-      url:  "https://api.mlab.com/api/1/databases/cmpe172game/collections/score?apiKey=zSElocti0xgz1UhZKYD9ezXcaMO7BFqq"
+      url:  "https://api.mlab.com/api/1/databases/cmpe172game/collections/score?f={"green": 1}&apiKey=zSElocti0xgz1UhZKYD9ezXcaMO7BFqq"
     }).done(function(data){
-        console.log(data.green);
+        console.log(data);
       });
   });
 
