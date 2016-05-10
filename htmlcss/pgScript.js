@@ -4,9 +4,7 @@ $(document).ready(function(){
     $.ajax({
       url:  "https://api.mlab.com/api/1/databases/cmpe172game/collections/score?apiKey=zSElocti0xgz1UhZKYD9ezXcaMO7BFqq"
     }).done(function(data){
-        console.log(data);
-        score = JSON.parse(data);
-        console.log(score.green);
+        console.log(data.green);
       });
   });
 
