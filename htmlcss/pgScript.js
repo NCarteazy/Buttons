@@ -4,7 +4,7 @@ $document.ready(function(){
     console.log('Submitted');
   });
 
-}
+});
 
 
 function Timer() {
