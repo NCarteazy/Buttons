@@ -49,7 +49,13 @@ function Timer(st) {
 		endSec = (curSec < 30) ? 30 - curSec : 60 - curSec,
 		finSec = (endSec < 10) ? "0" + endSec : endSec;
         display.innerHTML = "00:" + finSec;
-     	if(1 === endSec) {
+     	if(28 ==== endSec) {
+		resetScore();
+	}
+	if(29 === endSec()) {
+		resetPage();
+	}
+	if(1 === endSec) {
 		setTimeout(ender, 1000);
 	}
 	setTimeout(Timer, 1000, st);
@@ -79,8 +85,6 @@ function ender() {
 	wintext.style.display = "visible";
 	wintext.innerHTML = "WINNER";
 	});
-	setTimeout(resetPage, 750);
-	setTimeout(resetScore, 3000);
 }
 
 function resetScore() {
