@@ -1,11 +1,33 @@
 $(document).ready(function(){
   $('#counter1').on('click', function(e){
     e.preventDefault();
-    console.log('Submitted');
+    $.ajax({
+      url: "https://api.mlab.com/api/1/databases/cmpe172game/collections/score?apiKey=AJMjXxj5wXnTDjLmAguBhhjlksAb7qnv",
+      data: JSON.stringify({ 
+        "x" : 1 
+      }),
+      type: "POST",
+      contentType: "application/json",
+      success: function(){
+        window.location.href="index.html"
+      },
+      error: function(xhr, status, err){
+        console.log(err);
+      }
+    });
+
   });
 
 });
 
+
+function getDat(){
+  $.ajax({
+    url: "https://api.mlab.com/api/1/databases/cmpe172game/collections/score?apiKey=AJMjXxj5wXnTDjLmAguBhhjlksAb7qnv" 
+  }).done(function(data){
+    console.log(data);
+  });
+}
 
 function Timer() {
 	var display = document.getElementById("timer"),
