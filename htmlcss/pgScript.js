@@ -68,7 +68,7 @@ function Timer(st) {
      	if(28 === endSec) {
 		resetScore();
 	}
-	}
+	
 	if(1 === endSec) {
 		setTimeout(ender, 1000);
 	}
