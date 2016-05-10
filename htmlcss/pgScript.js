@@ -68,8 +68,6 @@ function Timer(st) {
      	if(28 === endSec) {
 		resetScore();
 	}
-	if(27 === endSec) {
-		resetPage();
 	}
 	if(1 === endSec) {
 		setTimeout(ender, 1000);
@@ -100,6 +98,7 @@ function ender() {
     winner.style.backgroundColor = "#FFDF00";
     wintext.innerHTML = "The winner is: " + winname;
   });
+  setTimeout(resetPage, 5000);
 }
 
 function resetScore() {
