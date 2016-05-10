@@ -43,13 +43,11 @@ function getDat(){
 
 function Timer() {
 	var display = document.getElementById("timer"),
-		sTime = '<%=DateTime.Now%>',
                 now = new Date(),
 		curSec = now.getSeconds(),
 		endSec = (curSec < 30) ? 30 - curSec : 60 - curSec,
 		finSec = (endSec < 10) ? "0" + endSec : endSec;
         display.innerHTML = "00:" + finSec;
-	console.log(sTime);
      	if(1 === endSec) {
 		setTimeout(ender, 1000);
 	}
@@ -114,7 +112,37 @@ function b2Click() {
 	}
 }
 
+function srvTime() {
+	var xmlHttp;
+	try {
+	    //FF, Opera, Safari, Chrome
+	    xmlHttp = new XMLHttpRequest();
+	}
+	catch (err1) {
+	  	//IE
+		try {
+       		 xmlHttp = new ActiveXObject('Msxml2.XMLHTTP');
+    		}
+    	catch (err2) {
+        	try {
+        	xmlHttp = new ActiveXObject('Microsoft.XMLHTTP');
+        	}
+        catch (eerr3) {
+            	//AJAX not supported, use CPU time.
+            	alert("AJAX not supported");
+        }
+    	}
+	}
+	xmlHttp.open('HEAD',window.location.href.toString(),false);
+	xmlHttp.setRequestHeader("Content-Type", "text/html");
+	xmlHttp.send('');
+	return xmlHttp.getResponseHeader("Date");
+} 
+}
+
 window.onload = function () {
-    Timer();
+    	var st = srvTime();
+	console.log(st)
+	Timer();
 	resetPage(); 
 };
